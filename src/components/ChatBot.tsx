@@ -51,11 +51,11 @@ const PaperCupChatbot = () => {
     }
   };
 
-  const processQuery = (query) => {
+  const processQuery = (query: string) => {
     const lowerQuery = query.toLowerCase();
     
-    const matchKeywords = (keywords) => 
-      keywords.some(keyword => lowerQuery.includes(keyword));
+    const matchKeywords = (keywords: any) => 
+      keywords.some((keyword:any) => lowerQuery.includes(keyword));
 
     if (matchKeywords(['type', 'kinds'])) {
       return `Paper cup types include: ${paperCupKnowledge.types.join(', ')}`;

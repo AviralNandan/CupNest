@@ -11,8 +11,8 @@ import {
 } from 'lucide-react';
 
 const PaperCupQRSystem = () => {
-  const [selectedCup, setSelectedCup] = useState(null);
-  const [copiedCup, setCopiedCup] = useState(null);
+  const [selectedCup, setSelectedCup] = useState<typeof paperCupDatabase[keyof typeof paperCupDatabase] | null>(null);
+  const [copiedCup, setCopiedCup] = useState<string | null>(null);
 
   const paperCupDatabase = {
     'standard-hot': {
@@ -176,7 +176,13 @@ const PaperCupQRSystem = () => {
   };
 
   // Rest of the component remains the same as in the previous implementation
-  const CupInfoModal = ({ cup }) => {
+  interface CupInfoModalProps {
+    cup: typeof paperCupDatabase[keyof typeof paperCupDatabase] | null;
+    copiedCup: string | null;
+    setCopiedCup: React.Dispatch<React.SetStateAction<string | null>>;
+  }
+
+  const CupInfoModal = ({ cup }: CupInfoModalProps) => {
     if (!cup) return null;
 
     return (
