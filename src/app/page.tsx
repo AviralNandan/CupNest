@@ -248,7 +248,7 @@ function App() {
             <AlternativeCard
               title="Copper Vessels"
               description="Traditional cups with natural health benefits."
-              imageUrl="/Copper_Cup.jpg"
+              imageUrl="/copper_cup.jpg"
               benefits={[
                 'Natural purification',
                 'Ayurvedic benefits',
