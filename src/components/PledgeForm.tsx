@@ -32,7 +32,7 @@ const PledgeForm: React.FC = () => {
           <Check className="w-16 h-16 text-green-600 mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-4">Thank You!</h3>
           <p className="text-gray-600">
-            Your pledge has been recorded. Check your email for confirmation and next steps.
+            Your pledge has been recorded. Check your email for confirmation.
           </p>
         </div>
       </div>

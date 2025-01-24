@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Coffee, Leaf, AlertTriangle, BarChart3, Recycle, ThumbsUp, Heart, Droplets, Thermometer, Globe2, BookOpen, Trophy, FileText, Youtube, Mail } from 'lucide-react';
+import { Coffee, Atom ,QrCodeIcon ,Leaf, AlertTriangle, BarChart3, Recycle, ThumbsUp, Heart, Droplets, Thermometer, Globe2, BookOpen, Trophy, FileText, Youtube, Mail } from 'lucide-react';
 import FactCard from '@/components/FactCard';
 import AlternativeCard from '@/components/AlternativeCard';
 import ImpactCounter from '@/components/ImpactCounter';
@@ -13,6 +13,8 @@ import FAQSection from '@/components/FAQSection';
 import CaseStudies from '@/components/CaseStudies';
 import PledgeForm from '@/components/PledgeForm';
 import AboutSection from '@/components/AboutSection';
+import QRCodeSection from '@/components/QRCode';
+import CarbonFootprintCalculator from '@/components/CarbonFootprint';
 
 function App() {
   const [activeTab, setActiveTab] = useState('about');
@@ -52,8 +54,10 @@ function App() {
               { id: 'guide', label: 'Usage Guide', icon: BookOpen },
               { id: 'impact', label: 'Environmental Impact', icon: BarChart3 },
               { id: 'pledge', label: 'Take Action', icon: Heart },
-              { id: 'learn', label: 'Learn & Earn', icon: Trophy },
+              { id: 'learn', label: 'Play & Learn', icon: Trophy },
               { id: 'cases', label: 'Case Studies', icon: FileText },
+              { id: 'qr', label: 'QR', icon: QrCodeIcon },
+              { id: 'carbon', label: 'Carbon Footprint Calculator', icon: Atom },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -172,7 +176,7 @@ function App() {
             <AlternativeCard
               title="Double-Wall Stainless Steel"
               description="Premium insulated cups perfect for maintaining temperature for extended periods."
-              imageUrl="https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=800"
+              imageUrl="/2wall.png"
               benefits={[
                 'Superior temperature retention',
                 'Lifetime durability',
@@ -232,7 +236,7 @@ function App() {
             <AlternativeCard
               title="Cork-Insulated Glass"
               description="Perfect blend of sustainability and functionality."
-              imageUrl="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800"
+              imageUrl="/cork.png"
               benefits={[
                 'Natural insulation',
                 'Sustainable materials',
@@ -256,7 +260,7 @@ function App() {
             <AlternativeCard
               title="Hemp Fiber Cups"
               description="Sustainable cups made from hemp fiber composites."
-              imageUrl="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800"
+              imageUrl="/image.png"
               benefits={[
                 'Rapidly renewable resource',
                 'Naturally antimicrobial',
@@ -268,7 +272,7 @@ function App() {
             <AlternativeCard
               title="Recycled Steel Cups"
               description="Eco-friendly cups made from recycled steel."
-              imageUrl="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800"
+              imageUrl="/recycled.png"
               benefits={[
                 'Made from recycled materials',
                 'Infinitely recyclable',
@@ -333,23 +337,14 @@ function App() {
           </div>
         </section>
 
-        {/* Learn & Earn Section */}
+        {/* Learn & Play Section */}
         <section className={activeTab === 'learn' ? 'block' : 'hidden'}>
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">Learn & Earn</h2>
+          <h2 className="text-3xl font-bold mb-8 text-gray-800">Play & Learn</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <Quiz />
             </div>
             <div className="space-y-8">
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <Trophy className="w-6 h-6 mr-2 text-green-600" />
-                  Your Achievements
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Achievement badges would go here */}
-                </div>
-              </div>
               <FAQSection />
             </div>
           </div>
@@ -360,6 +355,17 @@ function App() {
           <h2 className="text-3xl font-bold mb-8 text-gray-800">Case Studies & Resources</h2>
           <CaseStudies />
         </section>
+
+        {/* QR Code Section */}
+        <section className={activeTab === 'qr' ? 'block' : 'hidden'}>
+            <QRCodeSection />
+        </section>
+
+        {/* Carbon Footprint Calculator Section */}
+        <section className={activeTab === 'carbon' ? 'block' : 'hidden'}>
+          <CarbonFootprintCalculator />
+        </section>
+          
       </main>
 
       {/* Footer */}
@@ -375,27 +381,10 @@ function App() {
                 Leading the movement towards sustainable beverage consumption.
               </p>
             </div>
-            <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-green-400">About Us</a></li>
-                <li><a href="#" className="hover:text-green-400">Resources</a></li>
-                <li><a href="#" className="hover:text-green-400">Contact</a></li>
-                <li><a href="#" className="hover:text-green-400">Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Connect With Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="hover:text-green-400">Twitter</a>
-                <a href="#" className="hover:text-green-400">Instagram</a>
-                <a href="#" className="hover:text-green-400">Facebook</a>
-              </div>
-            </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p className="text-sm opacity-75">
-              © 2024 CUPNEST. All rights reserved.
+              © 2025 CUPNEST. All rights reserved.
             </p>
           </div>
         </div>

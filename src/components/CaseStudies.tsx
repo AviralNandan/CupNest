@@ -41,17 +41,17 @@ const CaseStudies: React.FC = () => {
   const videos = [
     {
       title: "Proper Cup Disposal Guide",
-      url: "https://www.youtube.com/watch?v=example1",
+      url: "https://youtu.be/Ccsf0Ewx9b8?si=FuDhJFVfofSUZBNR",
       description: "Learn how to properly dispose of different types of cups"
     },
     {
-      title: "Environmental Impact of Disposable Cups",
-      url: "https://www.youtube.com/watch?v=example2",
+      title: "How do paper cups get made and recycled?",
+      url: "https://youtu.be/AdmqKQOc-0I?si=kXptSOFvTnFIqdgX",
       description: "Understanding the lifecycle impact of disposable cups"
     },
     {
-      title: "Sustainable Alternatives Overview",
-      url: "https://www.youtube.com/watch?v=example3",
+      title: "Paper Cup Recycling",
+      url: "https://youtu.be/AdmqKQOc-0I?si=kXptSOFvTnFIqdgX",
       description: "Exploring eco-friendly cup alternatives"
     }
   ];

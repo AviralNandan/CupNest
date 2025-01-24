@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
         </h2>
         <div className="prose lg:prose-lg">
           <p className="text-lg mb-6">
-            CUPNEST is a pioneering initiative dedicated to transforming how we consume beverages in our daily lives. We believe that every small change in our habits can lead to significant positive impacts on both our health and the environment.
+            CUPNEST is a pioneering initiative dedicated to transforming how we consume beverages in disposable cups in our daily lives. We believe that every small change in our habits can lead to significant positive impacts on both our health and the environment.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
